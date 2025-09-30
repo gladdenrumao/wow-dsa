@@ -65,7 +65,7 @@ arr = [2, 3, 4, 10, 18]
 target = 10 
 print(recursive_binary_search(arr, 0, len(arr) - 1, target))  # Output: 3 (Index of 10)`}
         />
-        <p>✅ Uses recursion for a more intuitive approach.</p>
+        <p>✅ Uses recursion for a more intuitive approach. </p>
         <p>❌ Uses extra space due to recursive function calls (O(log n) space complexity).</p>
       </LearningSection>
 
