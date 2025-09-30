@@ -1,0 +1,46 @@
+.learning-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.learning-section {
+  background: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #007bff;
+}
+
+.code-block {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.complexity-table, .dry-run-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}

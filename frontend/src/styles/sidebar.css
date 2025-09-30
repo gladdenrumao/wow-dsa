@@ -1,0 +1,40 @@
+.full-page-sidebar {
+    width: 100vw;
+    height: 100vh;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .sidebar-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .sidebar-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+  }
+  
+  .sidebar-button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .sidebar-button:hover {
+    background: #0056b3;
+  }
+  
