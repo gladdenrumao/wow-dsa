@@ -44,7 +44,7 @@ print("World!")
 # Output: Hello World!`}
         />
         <p>✅ <code>sep</code> changes the separator between values (default is space).</p>
-        <p>✅ <code>end</code> changes what's printed at the end (default is newline).</p>
+        <p>✅ <code>end</code> changes what&apos;s printed at the end (default is newline).</p>
       </LearningSection>
 
       <LearningSection title="3️⃣ Basic Input - input() Function">
@@ -330,12 +330,12 @@ while True:
             <tr>
               <td><code>print()</code></td>
               <td>Display output</td>
-              <td>print("Hello")</td>
+              <td>print(&quot;Hello&quot;)</td>
             </tr>
             <tr>
-              <td><code>print(f"...")</code></td>
+              <td><code>print(f&quot;...&quot;)</code></td>
               <td>Formatted output</td>
-              <td>print(f"Age: {'{age}'}")</td>
+              <td>print(f&quot;Age: {'{age}'}&quot;)</td>
             </tr>
             <tr>
               <td><code>file.read()</code></td>
@@ -362,7 +362,7 @@ while True:
           <li>✅ Use <code>split()</code> to break input into multiple values.</li>
           <li>✅ Convert data types immediately after input for clarity.</li>
           <li>❌ Avoid using <code>eval()</code> on user input (security risk).</li>
-          <li>❌ Don't assume input is always valid - always validate!</li>
+          <li>❌ Don&apos;t assume input is always valid - always validate!</li>
         </ul>
       </LearningSection>
 
