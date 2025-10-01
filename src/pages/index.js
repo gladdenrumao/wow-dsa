@@ -14,8 +14,7 @@ const Home = () => {
   };
 
   // Filter topics based on selected track
-  // For now, all topics belong to DSA
-  const filteredTopics = selectedTrack === "dsa" ? topics : [];
+  const filteredTopics = topics.filter(topic => topic.track === selectedTrack);
 
   return (
     <div className="full-page-sidebar">
@@ -37,14 +36,30 @@ const Home = () => {
       )}
       
       {selectedTrack === "psp" && (
-        <div className="empty-track-message">
-          <p>🚧 Python Programming Course notes coming soon!</p>
+        <div className="sidebar-topics">
+          {filteredTopics.map((topic) => (
+            <button
+              key={topic.id}
+              onClick={() => router.push(`/${topic.id}`)}
+              className="sidebar-button"
+            >
+              {topic.name}
+            </button>
+          ))}
         </div>
       )}
       
       {selectedTrack === "ada" && (
-        <div className="empty-track-message">
-          <p>🚧 Analysis & Design of Algorithms notes coming soon!</p>
+        <div className="sidebar-topics">
+          {filteredTopics.map((topic) => (
+            <button
+              key={topic.id}
+              onClick={() => router.push(`/${topic.id}`)}
+              className="sidebar-button"
+            >
+              {topic.name}
+            </button>
+          ))}
         </div>
       )}
     </div>
