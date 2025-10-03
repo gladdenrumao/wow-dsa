@@ -64,7 +64,10 @@ console.log("Hello, World!");`
   };
 
   React.useEffect(() => {
-    setCode(defaultCode[language]);
+    if (!code) {
+      setCode(defaultCode[language]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -167,7 +170,7 @@ console.log("Hello, World!");`
           <li>Select a programming language from the buttons above</li>
           <li>Write or paste your code in the code editor</li>
           <li>Add input (if your program requires it) in the Input section</li>
-          <li>Click "Run Code" to execute your program</li>
+          <li>Click &quot;Run Code&quot; to execute your program</li>
           <li>View the output in the Output section</li>
         </ul>
       </div>
