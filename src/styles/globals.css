@@ -115,14 +115,15 @@ th {
 }
 
 .full-page-sidebar {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: calc(100vh - 72px); /* Account for header height */
   background: #f8f9fa;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  flex: 1;
 }
 
 .sidebar-title {
@@ -171,7 +172,7 @@ html, body {
 }
 
 /* The main content should expand to push the footer down */
-.app-container > *:nth-child(1) {
+.app-container > *:nth-child(2) {
   flex: 1;
 }
 
@@ -181,8 +182,8 @@ footer {
   padding: 15px;
   font-size: 18px;
   background: #f8f8f8; /* Light background */
-  position: relative;
   width: 100%;
+  margin-top: auto;
 }
 
 /* Track Slider Styles */
