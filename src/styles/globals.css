@@ -175,6 +175,125 @@ body {
   font-size: 20px;
 }
 
+/* Hamburger menu styles */
+.mobile-menu-container {
+  position: relative;
+}
+
+.hamburger-button {
+  display: block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--header-bg);
+  border-radius: 0 0 0 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 99;
+  min-width: 200px;
+}
+
+.mobile-menu-item {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.mobile-menu-item .theme-icon,
+.mobile-menu-item .compiler-icon {
+  font-size: 20px;
+}
+
+/* Responsive styles */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1rem;
+  }
+
+  .header-title {
+    font-size: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .header-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .learning-container {
   max-width: 800px;
   margin: auto;
