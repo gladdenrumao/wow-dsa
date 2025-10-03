@@ -6,7 +6,9 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1>DSA Prime</h1>
+      <div className="logo-container">
+        <img src="/wowdsalogo.jpeg" alt="WOW DSA Logo" className="header-logo" />
+      </div>
       <button 
         onClick={() => router.push("/compiler")}
         className="compiler-button"
