@@ -18,7 +18,6 @@ const Home = () => {
 
   return (
     <div className="full-page-sidebar">
-      <h1 className="sidebar-title">WOW DSA</h1>
       <TrackSlider selectedTrack={selectedTrack} onTrackChange={handleTrackChange} />
       
       {selectedTrack === "dsa" && (
