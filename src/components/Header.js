@@ -1,8 +1,10 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { useTheme } from "@/context/ThemeContext";
 
 const Header = () => {
   const router = useRouter();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className="header">
@@ -10,13 +12,22 @@ const Header = () => {
         <img src="/wowdsalogo.jpeg" alt="WOW DSA Logo" className="header-logo" />
       </div>
       <h1 className="header-title">WOW DSA</h1>
-      <button 
-        onClick={() => router.push("/compiler")}
-        className="compiler-button"
-      >
-        <span className="compiler-icon">⚡</span>
-        Compiler
-      </button>
+      <div className="header-actions">
+        <button 
+          onClick={toggleTheme}
+          className="theme-toggle-button"
+          aria-label="Toggle theme"
+        >
+          <span className="theme-icon">{theme === "light" ? "🌙" : "☀️"}</span>
+        </button>
+        <button 
+          onClick={() => router.push("/compiler")}
+          className="compiler-button"
+        >
+          <span className="compiler-icon">⚡</span>
+          Compiler
+        </button>
+      </div>
     </header>
   );
 };
