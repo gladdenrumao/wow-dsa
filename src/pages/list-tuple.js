@@ -7,15 +7,6 @@ const ListTuple = () => {
     <div className="learning-container">
       <h1 className="page-title">List & Tuple</h1>
 
-      <div style={{ marginBottom: '2rem', padding: '1rem', backgroundColor: '#f0f9ff', borderRadius: '0.5rem', border: '2px solid #3b82f6' }}>
-        <h2 style={{ margin: '0 0 0.5rem 0', fontSize: '1.25rem', color: '#1e40af' }}>📚 Lecture Notes</h2>
-        <p style={{ margin: 0 }}>
-          <a href="/pspnotes/RU - Lecture 8 PPT.pptx.pdf" download style={{ color: '#2563eb', textDecoration: 'underline', fontWeight: '500' }}>
-            📥 Download Lecture 8 PDF
-          </a>
-        </p>
-      </div>
-
       <LearningSection title="1️⃣ Overview">
         <ul>
           <li>🔹 Lists and Tuples are ordered sequences that store multiple items.</li>
