@@ -39,8 +39,9 @@ const Home = () => {
           {filteredTopics.map((topic) => (
             <button
               key={topic.id}
-              onClick={() => router.push(`/${topic.id}`)}
-              className="sidebar-button"
+              onClick={() => !topic.disabled && router.push(`/${topic.id}`)}
+              className={`sidebar-button ${topic.disabled ? 'disabled' : ''}`}
+              disabled={topic.disabled}
             >
               {topic.name}
             </button>
