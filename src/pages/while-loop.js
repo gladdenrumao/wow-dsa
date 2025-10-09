@@ -201,7 +201,7 @@ while count <= 5:
         <p>✅ Use <code>break</code> to exit intentional infinite loops.</p>
       </LearningSection>
 
-      <LearningSection title="6️⃣ Nested While Loops">
+      {/* <LearningSection title="6️⃣ Nested While Loops">
         <p>🧠 While loop inside another while loop.</p>
         
         <CodeBlock
@@ -242,9 +242,9 @@ while attempts < max_attempts:
 else:
     print(f"Game over! The number was {secret}")`}
         />
-      </LearningSection>
+      </LearningSection> */}
 
-      <LearningSection title="7️⃣ Common Patterns">
+      {/* <LearningSection title="7️⃣ Common Patterns">
         <h3>Input Validation</h3>
         <CodeBlock
           code={`# Keep asking until valid input
@@ -282,9 +282,9 @@ try:
 except EOFError:
     print(f"Total: {total}")`}
         />
-      </LearningSection>
+      </LearningSection> */}
 
-      <LearningSection title="8️⃣ do-while Loop Alternative">
+      {/* <LearningSection title="8️⃣ do-while Loop Alternative">
         <p>🧠 Python doesn&apos;t have do-while, but you can simulate it.</p>
         
         <CodeBlock
@@ -321,7 +321,7 @@ while True:
     else:
         print("Invalid choice")`}
         />
-      </LearningSection>
+      </LearningSection> */}
 
       <LearningSection title="9️⃣ Best Practices">
         <ul>
@@ -404,7 +404,7 @@ print()  # New line
 #         0 1 1 2 3 5 8 13 21 34`}
         />
 
-        <h3>Example 5: ATM Simulation</h3>
+        {/* <h3>Example 5: ATM Simulation</h3>
         <CodeBlock
           code={`balance = 1000
 
@@ -444,9 +444,9 @@ while True:
 # Enter choice: 1
 # Enter deposit amount: 500
 # Deposited $500.00`}
-        />
+        /> */}
 
-        <h3>Example 6: Digital Root Calculator</h3>
+        <h3>Example : Digital Root Calculator</h3>
         <CodeBlock
           code={`# Calculate digital root (sum digits until single digit)
 num = int(input("Enter a number: "))
