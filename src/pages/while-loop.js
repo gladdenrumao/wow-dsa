@@ -323,7 +323,7 @@ while True:
         />
       </LearningSection> */}
 
-      <LearningSection title="9️⃣ Best Practices">
+      <LearningSection title="Best Practices">
         <ul>
           <li>✅ Always ensure the loop condition can become False.</li>
           <li>✅ Update loop variables inside the loop body.</li>
@@ -336,7 +336,7 @@ while True:
         </ul>
       </LearningSection>
 
-      <LearningSection title="🔟 Practice Examples">
+      <LearningSection title="Practice Examples">
         <h3>Example 1: Factorial Calculator</h3>
         <CodeBlock
           code={`n = int(input("Enter a number: "))
