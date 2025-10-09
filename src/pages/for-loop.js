@@ -109,7 +109,7 @@ for i in range(5, 0, -1):
         <p>✅ Stop value is exclusive (not included).</p>
       </LearningSection>
 
-      <LearningSection title="4️⃣ enumerate() Function">
+      {/* <LearningSection title="4️⃣ enumerate() Function">
         <p>🧠 Get both index and value while iterating.</p>
         
         <CodeBlock
@@ -135,9 +135,9 @@ for index, fruit in enumerate(fruits, start=1):
 #         3. cherry`}
         />
         <p>✅ More Pythonic than using <code>range(len(list))</code>.</p>
-      </LearningSection>
+      </LearningSection> */}
 
-      <LearningSection title="5️⃣ Nested For Loops">
+      {/* <LearningSection title="5️⃣ Nested For Loops">
         <p>🧠 Loop inside another loop for multi-dimensional data.</p>
         
         <h3>Simple Pattern</h3>
@@ -186,7 +186,7 @@ for row in matrix:
 #         7 8 9`}
         />
         <p>✅ Inner loop completes fully for each iteration of outer loop.</p>
-      </LearningSection>
+      </LearningSection> */}
 
       <LearningSection title="6️⃣ Loop Control Statements">
         <h3>break - Exit Loop Early</h3>
@@ -237,7 +237,7 @@ else:
         <p>✅ <code>else</code> runs if loop completes without <code>break</code>.</p>
       </LearningSection>
 
-      <LearningSection title="7️⃣ Iterating Over Different Data Structures">
+      {/* <LearningSection title="7️⃣ Iterating Over Different Data Structures">
         <h3>Dictionary Iteration</h3>
         <CodeBlock
           code={`student = {"name": "Alice", "age": 25, "grade": "A"}
@@ -360,10 +360,10 @@ print(person)
           <li>❌ Don't modify list while iterating over it.</li>
           <li>❌ Don't use <code>range(len(list))</code> when you can iterate directly.</li>
         </ul>
-      </LearningSection>
+      </LearningSection> */}
 
       <LearningSection title="1️⃣1️⃣ Practice Examples">
-        <h3>Example 1: Sum of List Elements</h3>
+        {/* <h3>Example 1: Sum of List Elements</h3>
         <CodeBlock
           code={`numbers = [10, 20, 30, 40, 50]
 total = 0
@@ -376,7 +376,7 @@ print(f"Sum: {total}")  # Output: Sum: 150
 # Using built-in sum() (more Pythonic)
 total = sum(numbers)
 print(f"Sum: {total}")  # Output: Sum: 150`}
-        />
+        /> */}
 
         <h3>Example 2: Factorial Calculator</h3>
         <CodeBlock
@@ -389,7 +389,7 @@ for i in range(1, n + 1):
 print(f"{n}! = {factorial}")  # Output: 5! = 120`}
         />
 
-        <h3>Example 3: Pattern Printing</h3>
+        {/* <h3>Example 3: Pattern Printing</h3>
         <CodeBlock
           code={`# Print a triangle pattern
 n = 5
@@ -401,7 +401,7 @@ for i in range(1, n + 1):
 #         * * * 
 #         * * * * 
 #         * * * * *`}
-        />
+        /> */}
 
         <h3>Example 4: Finding Prime Numbers</h3>
         <CodeBlock
@@ -422,7 +422,7 @@ print(f"Primes up to {n}: {primes}")
 # Output: Primes up to 20: [2, 3, 5, 7, 11, 13, 17, 19]`}
         />
 
-        <h3>Example 5: Fibonacci Series</h3>
+        {/* <h3>Example 5: Fibonacci Series</h3>
         <CodeBlock
           code={`# Generate first n Fibonacci numbers
 n = 10
@@ -434,9 +434,9 @@ for i in range(2, n):
 
 print(f"First {n} Fibonacci numbers: {fib}")
 # Output: First 10 Fibonacci numbers: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]`}
-        />
+        /> */}
 
-        <h3>Example 6: Character Frequency Counter</h3>
+        {/* <h3>Example 6: Character Frequency Counter</h3>
         <CodeBlock
           code={`text = "hello world"
 frequency = {}
@@ -455,7 +455,7 @@ for char, count in sorted(frequency.items()):
 #         o: 2
 #         r: 1
 #         w: 1`}
-        />
+        /> */}
       </LearningSection>
     </div>
   );
