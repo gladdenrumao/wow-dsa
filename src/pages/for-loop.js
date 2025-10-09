@@ -188,7 +188,7 @@ for row in matrix:
         <p>✅ Inner loop completes fully for each iteration of outer loop.</p>
       </LearningSection> */}
 
-      <LearningSection title="6️⃣ Loop Control Statements">
+      <LearningSection title="Loop Control Statements">
         <h3>break - Exit Loop Early</h3>
         <CodeBlock
           code={`# Find first even number
@@ -362,7 +362,7 @@ print(person)
         </ul>
       </LearningSection> */}
 
-      <LearningSection title="1️⃣1️⃣ Practice Examples">
+      <LearningSection title="Practice Examples">
         {/* <h3>Example 1: Sum of List Elements</h3>
         <CodeBlock
           code={`numbers = [10, 20, 30, 40, 50]
