@@ -45,7 +45,7 @@ while i <= n:
     total += i
     i += 1
 
-print(f"Sum: {total}")  # Output: Sum: 15`}
+print(total)  # 15}
         />
         <p>✅ Condition is checked at the start of each iteration.</p>
         <p>✅ Update the loop variable to avoid infinite loops.</p>
@@ -112,11 +112,11 @@ while i <= 5:
 count = 1
 while count <= 10:
     if count == 5:
-        print(f"Found {count}!")
+        print(count)
         break
     count += 1
 
-print(f"Loop ended at {count}")
+print(count)
 # Output: Found 5!
 #         Loop ended at 5`}
         />
@@ -146,12 +146,12 @@ search = 6
 
 while num <= 5:
     if num == search:
-        print(f"Found {search}")
+        print(search)
         break
     num += 1
 else:
     # Executes if loop completes without break
-    print(f"{search} not found in range")
+    print(search)
 
 # Output: 6 not found in range`}
         />
@@ -210,7 +210,7 @@ i = 1
 while i <= 3:
     j = 1
     while j <= 3:
-        print(f"({i},{j})", end=" ")
+        print(i,j, end=" ")
         j += 1
     print()  # New line
     i += 1
@@ -347,7 +347,7 @@ while i <= n:
     factorial *= i
     i += 1
 
-print(f"{n}! = {factorial}")
+print(factorial)
 
 # Input: 5
 # Output: 5! = 120`}
@@ -363,7 +363,7 @@ while num > 0:
     reversed_num = reversed_num * 10 + digit
     num = num // 10
 
-print(f"Reversed: {reversed_num}")
+print(reversed_num)
 
 # Input: 12345
 # Output: Reversed: 54321`}
@@ -380,7 +380,7 @@ while b != 0:
     b = a % b
     a = temp
 
-print(f"GCD: {a}")
+print(a)
 
 # Input: 48, 18
 # Output: GCD: 6`}
@@ -458,7 +458,7 @@ while num >= 10:
         num //= 10
     num = digit_sum
 
-print(f"Digital root: {num}")
+print(num)
 
 # Input: 456
 # Output: Digital root: 6 (4+5+6=15, 1+5=6)`}
