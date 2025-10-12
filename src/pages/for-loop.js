@@ -17,7 +17,7 @@ const ForLoop = () => {
         </ul>
       </LearningSection>
 
-      <LearningSection title="2️⃣ Basic For Loop">
+      {/* <LearningSection title="2️⃣ Basic For Loop">
         <p>🧠 Iterate over elements in a sequence.</p>
         
         <h3>Iterating Over a List</h3>
@@ -48,7 +48,7 @@ for char in text:
 #         o`}
         />
         <p>✅ For loop automatically gets each element from the sequence.</p>
-      </LearningSection>
+      </LearningSection> */}
 
       <LearningSection title="3️⃣ range() Function">
         <p>🧠 Generate sequences of numbers for iteration.</p>
