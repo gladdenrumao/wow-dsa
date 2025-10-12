@@ -45,7 +45,7 @@ while i <= n:
     total += i
     i += 1
 
-print(total)  # 15}
+print(total)  # 15`}
         />
         <p>✅ Condition is checked at the start of each iteration.</p>
         <p>✅ Update the loop variable to avoid infinite loops.</p>
@@ -55,7 +55,7 @@ print(total)  # 15}
         <p>🧠 Choose the right loop for your use case.</p>
         
         <CodeBlock
-          code={# For loop - known iterations
+          code={`# For loop - known iterations
 print("For loop:")
 for i in range(1, 6):
     print(i)

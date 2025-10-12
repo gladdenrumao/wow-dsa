@@ -235,7 +235,7 @@ with open("input.txt", "r") as file:
 for _ in range(t):
     n = int(input())
     # Process each test case
-    print(f"Processing case with n = {n}")`}
+    print("Processing case with n =", n)`}
         />
 
         <h3>Pattern 2: Array Input</h3>
@@ -272,7 +272,7 @@ for row in matrix:
     while True:
         line = input()
         # Process line
-        print(f"Processed: {line}")
+        print("Processed:", line)
 except EOFError:
     pass  # End of input reached`}
         />
@@ -285,7 +285,7 @@ except EOFError:
           code={`# Safe integer input
 try:
     age = int(input("Enter your age: "))
-    print(f"Age: {age}")
+    print("Age:", age)
 except ValueError:
     print("Invalid input! Please enter a number.")
 
@@ -293,7 +293,7 @@ except ValueError:
 while True:
     try:
         num = int(input("Enter a number: "))
-        print(f"You entered: {num}")
+        print("You entered:", num)
         break  # Exit loop on valid input
     except ValueError:
         print("Invalid input! Try again.")`}
@@ -387,7 +387,7 @@ elif operation == '/':
 else:
     result = "Invalid operation"
 
-print(f"Result: {result}")`}
+print("Result:", result)`}
         />
 
         <h3>Example 2: Sum of Array Elements</h3>
@@ -398,15 +398,15 @@ arr = list(map(int, input("Enter elements: ").split()))
 total = sum(arr)
 average = total / n
 
-print(f"Sum: {total}")
-print(f"Average: {average:.2f}")
+print("Sum:", total)
+print("Average:", round(average, 2))
 
 # Input:
 # 5
 # 10 20 30 40 50
 # Output:
 # Sum: 150
-# Average: 30.00`}
+# Average: 30.0`}
         />
 
         <h3>Example 3: Grade Calculator</h3>
@@ -428,10 +428,10 @@ elif average >= 60:
 else:
     grade = 'F'
 
-print(f"\\nStudent: {name}")
-print(f"Total Marks: {total}")
-print(f"Average: {average:.2f}")
-print(f"Grade: {grade}")`}
+print("\\nStudent:", name)
+print("Total Marks:", total)
+print("Average:", round(average, 2))
+print("Grade:", grade)`}
         />
       </LearningSection>
     </div>

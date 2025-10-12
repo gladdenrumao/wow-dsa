@@ -213,7 +213,7 @@ print(combination_sum(candidates, target))
 # Example
 n = 4
 solutions = solve_n_queens(n)
-print(f"Number of solutions for {n}-Queens: {len(solutions)}")
+print("Number of solutions for", str(n) + "-Queens:", len(solutions))
 for solution in solutions:
     for row in solution:
         print(row)

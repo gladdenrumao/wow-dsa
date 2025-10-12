@@ -117,7 +117,7 @@ for i in range(5, 0, -1):
 
 # With enumerate
 for index, fruit in enumerate(fruits):
-    print(f"{index}: {fruit}")
+    print(str(index) + ":", fruit)
 
 # Output: 0: apple
 #         1: banana
@@ -128,7 +128,7 @@ for index, fruit in enumerate(fruits):
         <CodeBlock
           code={`# Start counting from 1
 for index, fruit in enumerate(fruits, start=1):
-    print(f"{index}. {fruit}")
+    print(str(index) + ".", fruit)
 
 # Output: 1. apple
 #         2. banana
@@ -145,7 +145,7 @@ for index, fruit in enumerate(fruits, start=1):
           code={`# Print a pattern
 for i in range(3):
     for j in range(3):
-        print(f"({i}, {j})", end=" ")
+        print("(" + str(i) + ", " + str(j) + ")", end=" ")
     print()  # New line after inner loop
 
 # Output: (0, 0) (0, 1) (0, 2) 
@@ -158,7 +158,7 @@ for i in range(3):
           code={`# 5x5 multiplication table
 for i in range(1, 6):
     for j in range(1, 6):
-        print(f"{i*j:3}", end=" ")
+        print(str(i*j).rjust(3), end=" ")
     print()
 
 # Output:   1   2   3   4   5 
@@ -195,7 +195,7 @@ for row in matrix:
 numbers = [1, 3, 5, 8, 9, 10]
 for num in numbers:
     if num % 2 == 0:
-        print(f"First even number: {num}")
+        print("First even number:", num)
         break
 
 # Output: First even number: 8`}
@@ -224,11 +224,11 @@ search = 6
 
 for num in numbers:
     if num == search:
-        print(f"Found {search}")
+        print("Found", search)
         break
 else:
     # Executes if loop completes without break
-    print(f"{search} not found")
+    print(search, "not found")
 
 # Output: 6 not found`}
         />
@@ -330,11 +330,11 @@ ages = [25, 30, 35]
 cities = ["New York", "London", "Paris"]
 
 for name, age, city in zip(names, ages, cities):
-    print(f"{name}, {age}, {city}")
+    print(name + ",", age, city)
 
-# Output: Alice, 25, New York
-#         Bob, 30, London
-#         Charlie, 35, Paris`}
+# Output: Alice, 25 New York
+#         Bob, 30 London
+#         Charlie, 35 Paris`}
         />
 
         <h3>Creating Dictionary from Lists</h3>
@@ -386,7 +386,7 @@ factorial = 1
 for i in range(1, n + 1):
     factorial *= i
 
-print(f"{n}! = {factorial}")  # Output: 5! = 120`}
+print(str(n) + "! =", factorial)  # Output: 5! = 120`}
         />
 
         {/* <h3>Example 3: Pattern Printing</h3>
@@ -418,7 +418,7 @@ for num in range(2, n + 1):
     if is_prime:
         primes.append(num)
 
-print(f"Primes up to {n}: {primes}")
+print("Primes up to", str(n) + ":", primes)
 # Output: Primes up to 20: [2, 3, 5, 7, 11, 13, 17, 19]`}
         />
 
