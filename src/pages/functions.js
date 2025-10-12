@@ -390,7 +390,7 @@ print(f"Min: {min_val}, Max: {max_val}, Average: {avg}")
 # Output: Min: 10, Max: 50, Average: 30.0`}
         />
 
-        <h3>Example 4: Password Validator</h3>
+        {/* <h3>Example 4: Password Validator</h3>
         <CodeBlock
           code={`def validate_password(password):
     """
@@ -423,7 +423,7 @@ for pwd in passwords:
 #         StrongPass1: Password is strong
 #         nodigits: Password must contain digit
 #         SHORT1: Password must be at least 8 characters`}
-        />
+        /> */}
       </LearningSection>
     </div>
   );
