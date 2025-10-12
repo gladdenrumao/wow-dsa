@@ -253,60 +253,7 @@ print(sum_of_digits(999))   # Output: 27 (9+9+9)
         />
       </LearningSection>
 
-      <LearningSection title="9️⃣ List Operations">
-        <h3>Sum of List</h3>
-        <CodeBlock
-          code={`def list_sum(lst):
-    # Base case
-    if not lst:  # Empty list
-        return 0
-    
-    # Recursive case: first element + sum of rest
-    return lst[0] + list_sum(lst[1:])
-
-# Test
-print(list_sum([1, 2, 3, 4, 5]))  # Output: 15
-print(list_sum([10, 20, 30]))     # Output: 60`}
-        />
-
-        <h3>Find Maximum</h3>
-        <CodeBlock
-          code={`def find_max(lst):
-    # Base case
-    if len(lst) == 1:
-        return lst[0]
-    
-    # Recursive case: compare first with max of rest
-    max_rest = find_max(lst[1:])
-    return lst[0] if lst[0] > max_rest else max_rest
-
-# Test
-print(find_max([3, 7, 2, 9, 1]))  # Output: 9
-print(find_max([10, 5, 15, 8]))   # Output: 15`}
-        />
-
-        <h3>Flatten Nested List</h3>
-        <CodeBlock
-          code={`def flatten(lst):
-    result = []
-    
-    for item in lst:
-        if isinstance(item, list):
-            # Recursive case: flatten nested list
-            result.extend(flatten(item))
-        else:
-            # Base case: add non-list item
-            result.append(item)
-    
-    return result
-
-# Test
-nested = [1, [2, 3], [4, [5, 6]], 7]
-print(flatten(nested))  # Output: [1, 2, 3, 4, 5, 6, 7]`}
-        />
-      </LearningSection>
-
-      <LearningSection title="🔟 GCD (Greatest Common Divisor)">
+      <LearningSection title="9️⃣ GCD (Greatest Common Divisor)">
         <p>🧠 Using Euclidean algorithm.</p>
         
         <CodeBlock
@@ -331,40 +278,7 @@ print(gcd(17, 13))  # Output: 1
         />
       </LearningSection>
 
-      <LearningSection title="1️⃣1️⃣ Binary Search (Recursive)">
-        <p>🧠 Search in sorted array using divide and conquer.</p>
-        
-        <CodeBlock
-          code={`def binary_search(arr, target, left, right):
-    # Base case: not found
-    if left > right:
-        return -1
-    
-    # Find middle
-    mid = (left + right) // 2
-    
-    # Base case: found
-    if arr[mid] == target:
-        return mid
-    
-    # Recursive cases
-    if arr[mid] > target:
-        # Search left half
-        return binary_search(arr, target, left, mid - 1)
-    else:
-        # Search right half
-        return binary_search(arr, target, mid + 1, right)
-
-# Test
-arr = [1, 3, 5, 7, 9, 11, 13, 15]
-target = 7
-result = binary_search(arr, target, 0, len(arr) - 1)
-print(f"Found at index: {result}")  # Output: Found at index: 3`}
-        />
-        <p>✅ Time complexity: O(log n) - very efficient!</p>
-      </LearningSection>
-
-      <LearningSection title="1️⃣2️⃣ Recursion vs Iteration">
+      <LearningSection title="🔟 Recursion vs Iteration">
         <table className="complexity-table">
           <thead>
             <tr>
@@ -423,7 +337,7 @@ print(factorial_iterative(5))  # Output: 120`}
         />
       </LearningSection>
 
-      <LearningSection title="1️⃣3️⃣ Avoiding Stack Overflow">
+      <LearningSection title="1️⃣1️⃣ Avoiding Stack Overflow">
         <p>🧠 Python has a recursion depth limit (usually ~1000).</p>
         
         <CodeBlock
@@ -454,7 +368,7 @@ print(iterative_version(2000))  # Works fine!`}
         <p>✅ Use iteration for very deep calls.</p>
       </LearningSection>
 
-      <LearningSection title="1️⃣4️⃣ Best Practices">
+      <LearningSection title="1️⃣2️⃣ Best Practices">
         <ul>
           <li>✅ Always define a clear base case.</li>
           <li>✅ Ensure recursive calls move toward base case.</li>
@@ -467,25 +381,8 @@ print(iterative_version(2000))  # Works fine!`}
         </ul>
       </LearningSection>
 
-      <LearningSection title="1️⃣5️⃣ Practice Examples">
-        <h3>Example 1: Count Occurrences</h3>
-        <CodeBlock
-          code={`def count_occurrences(lst, target):
-    # Base case: empty list
-    if not lst:
-        return 0
-    
-    # Recursive case
-    count = 1 if lst[0] == target else 0
-    return count + count_occurrences(lst[1:], target)
-
-# Test
-numbers = [1, 2, 3, 2, 4, 2, 5]
-print(count_occurrences(numbers, 2))  # Output: 3
-print(count_occurrences(numbers, 6))  # Output: 0`}
-        />
-
-        <h3>Example 2: Print Pattern</h3>
+      <LearningSection title="1️⃣3️⃣ Practice Examples">
+        <h3>Example 1: Print Pattern</h3>
         <CodeBlock
           code={`def print_pattern(n):
     # Base case
@@ -506,7 +403,7 @@ print_pattern(5)
 #         *`}
         />
 
-        <h3>Example 3: Tower of Hanoi</h3>
+        <h3>Example 2: Tower of Hanoi</h3>
         <CodeBlock
           code={`def tower_of_hanoi(n, source, auxiliary, target):
     # Base case
@@ -533,35 +430,6 @@ tower_of_hanoi(3, 'A', 'B', 'C')
 #         Move disk 1 from B to A
 #         Move disk 2 from B to C
 #         Move disk 1 from A to C`}
-        />
-
-        <h3>Example 4: Generate Permutations</h3>
-        <CodeBlock
-          code={`def permutations(arr):
-    # Base case: empty or single element
-    if len(arr) <= 1:
-        return [arr]
-    
-    result = []
-    
-    # For each element
-    for i in range(len(arr)):
-        # Fix current element
-        current = arr[i]
-        
-        # Get remaining elements
-        remaining = arr[:i] + arr[i+1:]
-        
-        # Generate permutations of remaining
-        for perm in permutations(remaining):
-            result.append([current] + perm)
-    
-    return result
-
-# Test
-print(permutations([1, 2, 3]))
-# Output: [[1, 2, 3], [1, 3, 2], [2, 1, 3], 
-#          [2, 3, 1], [3, 1, 2], [3, 2, 1]]`}
         />
       </LearningSection>
     </div>
