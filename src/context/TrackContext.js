@@ -11,7 +11,7 @@ export const useTrack = () => {
 };
 
 export const TrackProvider = ({ children }) => {
-  const [selectedTrack, setSelectedTrack] = useState("dsa"); // Default to DSA
+  const [selectedTrack, setSelectedTrack] = useState("psp"); // Default to PSP
 
   return (
     <TrackContext.Provider value={{ selectedTrack, setSelectedTrack }}>
