@@ -191,14 +191,14 @@ for row in matrix:
       <LearningSection title="Loop Control Statements">
         <h3>break - Exit Loop Early</h3>
         <CodeBlock
-          code={`# Find first even number
-numbers = [1, 3, 5, 8, 9, 10]
-for num in numbers:
-    if num % 2 == 0:
-        print("First even number:", num)
+          code={`# Find first number divisible by 3 from 10 to 20
+
+for num in range(10, 21):
+    if num % 3 == 0:
+        print("First number divisible by 3:", num)
         break
 
-# Output: First even number: 8`}
+# Output: First number divisible by 3: 12`}
         />
 
         <h3>continue - Skip Current Iteration</h3>
@@ -218,20 +218,18 @@ for i in range(10):
 
         <h3>else with For Loop</h3>
         <CodeBlock
-          code={`# Search for a number
-numbers = [1, 2, 3, 4, 5]
-search = 6
-
-for num in numbers:
-    if num == search:
-        print("Found", search)
+          code={`# Check if number divisible 7 in range L to R
+L, R = 1, 20
+for num in range(L, R + 1):
+    if num % 7 == 0:
+        print("Found a number divisible by 7:", num)
         break
 else:
-    # Executes if loop completes without break
-    print(search, "not found")
+    print("No number divisible by 7 found in range")
 
-# Output: 6 not found`}
+# Output: Found a number divisible by 7: 7`}
         />
+        <h3>Summary</h3>
         <p>✅ <code>break</code> exits the loop immediately.</p>
         <p>✅ <code>continue</code> skips to next iteration.</p>
         <p>✅ <code>else</code> runs if loop completes without <code>break</code>.</p>
