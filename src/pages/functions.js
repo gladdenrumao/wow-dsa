@@ -34,7 +34,7 @@ greet()  # Output: Hello, World!`}
         <h3>Function with Parameters</h3>
         <CodeBlock
           code={`def greet(name):
-    print(f"Hello, {name}!")
+    print("Hello, " + name + "!")
 
 greet("Alice")  # Output: Hello, Alice!
 greet("Bob")    # Output: Hello, Bob!`}
@@ -50,7 +50,7 @@ greet("Bob")    # Output: Hello, Bob!`}
         <CodeBlock
           code={`def add(a, b):
     result = a + b
-    print(f"{a} + {b} = {result}")
+    print(str(a) + " + " + str(b) + " = " + str(result))
 
 add(5, 3)   # Output: 5 + 3 = 8
 add(10, 20) # Output: 10 + 20 = 30`}
@@ -59,7 +59,7 @@ add(10, 20) # Output: 10 + 20 = 30`}
         <h3>Default Parameters</h3>
         <CodeBlock
           code={`def greet(name, greeting="Hello"):
-    print(f"{greeting}, {name}!")
+    print(greeting + ", " + name + "!")
 
 greet("Alice")              # Output: Hello, Alice!
 greet("Bob", "Hi")          # Output: Hi, Bob!
@@ -69,7 +69,7 @@ greet("Charlie", "Hey")     # Output: Hey, Charlie!`}
         <h3>Keyword Arguments</h3>
         <CodeBlock
           code={`def describe_person(name, age, city):
-    print(f"{name} is {age} years old and lives in {city}")
+    print(name + " is " + str(age) + " years old and lives in " + city)
 
 # Positional arguments
 describe_person("Alice", 25, "New York")
@@ -113,7 +113,7 @@ print(add(10, 20))  # Output: 30`}
 
 # Unpack return values
 s, d, p = calculate(10, 5)
-print(f"Sum: {s}, Difference: {d}, Product: {p}")
+print("Sum: " + str(s) + ", Difference: " + str(d) + ", Product: " + str(p))
 # Output: Sum: 15, Difference: 5, Product: 50`}
         />
 
@@ -172,150 +172,7 @@ print(count)  # Output: 2`}
         <p>❌ Avoid excessive use of global variables - pass parameters instead.</p>
       </LearningSection>
 
-      <LearningSection title="6️⃣ *args and **kwargs">
-        <p>🧠 Accept variable number of arguments.</p>
-        
-        <h3>*args (Variable Positional Arguments)</h3>
-        <CodeBlock
-          code={`def sum_all(*numbers):
-    total = 0
-    for num in numbers:
-        total += num
-    return total
-
-print(sum_all(1, 2, 3))        # Output: 6
-print(sum_all(1, 2, 3, 4, 5))  # Output: 15
-print(sum_all(10))             # Output: 10`}
-        />
-
-        <h3>**kwargs (Variable Keyword Arguments)</h3>
-        <CodeBlock
-          code={`def print_info(**info):
-    for key, value in info.items():
-        print(f"{key}: {value}")
-
-print_info(name="Alice", age=25, city="New York")
-# Output: name: Alice
-#         age: 25
-#         city: New York`}
-        />
-
-        <h3>Combining All Parameter Types</h3>
-        <CodeBlock
-          code={`def full_function(a, b, *args, default=10, **kwargs):
-    print(f"a: {a}, b: {b}")
-    print(f"args: {args}")
-    print(f"default: {default}")
-    print(f"kwargs: {kwargs}")
-
-full_function(1, 2, 3, 4, 5, default=20, x=100, y=200)
-# Output: a: 1, b: 2
-#         args: (3, 4, 5)
-#         default: 20
-#         kwargs: {'x': 100, 'y': 200}`}
-        />
-        <p>✅ <code>*args</code> collects extra positional arguments as tuple.</p>
-        <p>✅ <code>**kwargs</code> collects extra keyword arguments as dictionary.</p>
-      </LearningSection>
-
-      <LearningSection title="7️⃣ Lambda Functions">
-        <p>🧠 Anonymous, small functions defined in one line.</p>
-        
-        <CodeBlock
-          code={`# Regular function
-def square(x):
-    return x ** 2
-
-# Lambda function
-square_lambda = lambda x: x ** 2
-
-print(square(5))         # Output: 25
-print(square_lambda(5))  # Output: 25`}
-        />
-
-        <h3>Lambda with Multiple Parameters</h3>
-        <CodeBlock
-          code={`# Addition
-add = lambda a, b: a + b
-print(add(3, 5))  # Output: 8
-
-# Maximum of two numbers
-maximum = lambda a, b: a if a > b else b
-print(maximum(10, 20))  # Output: 20`}
-        />
-
-        <h3>Lambda with map(), filter(), sorted()</h3>
-        <CodeBlock
-          code={`# map() - apply function to all elements
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x ** 2, numbers))
-print(squared)  # Output: [1, 4, 9, 16, 25]
-
-# filter() - keep elements that match condition
-even = list(filter(lambda x: x % 2 == 0, numbers))
-print(even)  # Output: [2, 4]
-
-# sorted() with key
-students = [("Alice", 25), ("Bob", 20), ("Charlie", 23)]
-sorted_students = sorted(students, key=lambda x: x[1])
-print(sorted_students)
-# Output: [('Bob', 20), ('Charlie', 23), ('Alice', 25)]`}
-        />
-        <p>✅ Use lambda for simple, one-line operations.</p>
-        <p>❌ Don't use lambda for complex logic - use regular functions.</p>
-      </LearningSection>
-
-      <LearningSection title="8️⃣ Recursion">
-        <p>🧠 A function that calls itself to solve problems.</p>
-        
-        <CodeBlock
-          code={`# Factorial
-def factorial(n):
-    if n == 0 or n == 1:  # Base case
-        return 1
-    return n * factorial(n - 1)  # Recursive call
-
-print(factorial(5))  # Output: 120 (5*4*3*2*1)
-
-# Fibonacci
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
-
-print(fibonacci(6))  # Output: 8`}
-        />
-        <p>✅ Always have a base case to stop recursion.</p>
-        <p>❌ Be careful of infinite recursion (stack overflow).</p>
-      </LearningSection>
-
-      <LearningSection title="9️⃣ Docstrings">
-        <p>🧠 Document your functions using docstrings.</p>
-        
-        <CodeBlock
-          code={`def calculate_area(length, width):
-    """
-    Calculate the area of a rectangle.
-    
-    Parameters:
-    length (float): The length of the rectangle
-    width (float): The width of the rectangle
-    
-    Returns:
-    float: The area of the rectangle
-    """
-    return length * width
-
-# Access docstring
-print(calculate_area.__doc__)
-# Access using help()
-help(calculate_area)`}
-        />
-        <p>✅ Use triple quotes for docstrings.</p>
-        <p>✅ Place docstring right after function definition.</p>
-      </LearningSection>
-
-      <LearningSection title="🔟 Best Practices">
+      <LearningSection title="6️⃣ Best Practices">
         <ul>
           <li>✅ Use descriptive function names (verbs: calculate, get, print).</li>
           <li>✅ Keep functions small and focused on one task.</li>
@@ -328,7 +185,7 @@ help(calculate_area)`}
         </ul>
       </LearningSection>
 
-      <LearningSection title="1️⃣1️⃣ Practice Examples">
+      <LearningSection title="7️⃣ Practice Examples">
         <h3>Example 1: Temperature Converter</h3>
         <CodeBlock
           code={`def celsius_to_fahrenheit(celsius):
@@ -340,8 +197,10 @@ def fahrenheit_to_celsius(fahrenheit):
     return (fahrenheit - 32) * 5/9
 
 # Test
-print(f"25°C = {celsius_to_fahrenheit(25):.2f}°F")
-print(f"77°F = {fahrenheit_to_celsius(77):.2f}°C")
+c_temp = celsius_to_fahrenheit(25)
+f_temp = fahrenheit_to_celsius(77)
+print("25°C = " + str(round(c_temp, 2)) + "°F")
+print("77°F = " + str(round(f_temp, 2)) + "°C")
 
 # Output: 25°C = 77.00°F
 #         77°F = 25.00°C`}
@@ -361,7 +220,7 @@ print(f"77°F = {fahrenheit_to_celsius(77):.2f}°C")
 # Test
 for num in range(1, 11):
     if is_prime(num):
-        print(f"{num} is prime")
+        print(str(num) + " is prime")
 
 # Output: 2 is prime
 #         3 is prime
@@ -385,7 +244,7 @@ for num in range(1, 11):
 # Test
 data = [10, 20, 30, 40, 50]
 min_val, max_val, avg = calculate_stats(data)
-print(f"Min: {min_val}, Max: {max_val}, Average: {avg}")
+print("Min: " + str(min_val) + ", Max: " + str(max_val) + ", Average: " + str(avg))
 
 # Output: Min: 10, Max: 50, Average: 30.0`}
         />
@@ -417,7 +276,7 @@ print(f"Min: {min_val}, Max: {max_val}, Average: {avg}")
 passwords = ["weak", "StrongPass1", "nodigits", "SHORT1"]
 for pwd in passwords:
     is_valid, msg = validate_password(pwd)
-    print(f"{pwd}: {msg}")
+    print(pwd + ": " + msg)
 
 # Output: weak: Password must be at least 8 characters
 #         StrongPass1: Password is strong
