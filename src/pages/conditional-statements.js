@@ -71,9 +71,9 @@ else:
           code={`num = 7
 
 if num % 2 == 0:
-    print(f"{num} is even")
+    print(str(num), "is even")
 else:
-    print(f"{num} is odd")
+    print(str(num), "is odd")
 
 # Output: 7 is odd`}
         />
@@ -100,7 +100,7 @@ elif marks >= 50:
 else:
     grade = 'F'
 
-print(f"Grade: {grade}")
+print("Grade:", grade)
 # Output: Grade: B`}
         />
 
@@ -190,7 +190,7 @@ print(status)  # Output: Adult
 a = 10
 b = 20
 maximum = a if a > b else b
-print(f"Maximum: {maximum}")  # Output: Maximum: 20
+print("Maximum:", maximum)  # Output: Maximum: 20
 
 # Example 3: Even or odd
 num = 7
@@ -372,8 +372,8 @@ elif bmi < 30:
 else:
     category = "Obese"
 
-print(f"BMI: {bmi:.2f}")
-print(f"Category: {category}")
+print("BMI:", round(bmi, 2))
+print("Category:", category)
 
 # Input: 70, 1.75
 # Output: BMI: 22.86
@@ -402,7 +402,7 @@ elif length >= 10:
     else:
         strength = "Medium"
 
-print(f"Password strength: {strength}")
+print("Password strength:", strength)
 
 # Input: Pass123
 # Output: Password strength: Weak`}
@@ -436,11 +436,11 @@ if day == "weekend":
     price *= 1.2
     print("20% weekend surcharge applied")
 
-print(f"Total price: ${'{price:.2f}'}")
+print("Total price: $" + str(round(price, 2)))
 
 # Input: 22, yes, weekday
 # Output: 20% discount for students
-#         Total price: $80.00`}
+#         Total price: $80.0`}
         />
 
         <h3>Example 4: Triangle Type Checker</h3>

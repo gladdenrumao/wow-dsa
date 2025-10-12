@@ -161,7 +161,7 @@ for value in student.values():
 
 # Iterate over key-value pairs
 for key, value in student.items():
-    print(f"{key}: {value}")
+    print(str(key) + ":", value)
 # Output: name: Alice
 #         age: 25
 #         grade: A`}
@@ -277,7 +277,7 @@ print(fruits)
 
 # pop() - remove and return random element
 item = fruits.pop()
-print(f"Removed: {item}")
+print("Removed:", item)
 
 # clear() - remove all elements
 fruits.clear()
@@ -409,7 +409,7 @@ print(uppercase)  # Output: {'HELLO', 'WORLD', 'PYTHON'}`}
 text = "hello world"
 frequencies = char_frequency(text)
 for char, count in sorted(frequencies.items()):
-    print(f"{char}: {count}")
+    print(char + ":", count)
 
 # Output: d: 1
 #         e: 1
@@ -474,15 +474,15 @@ gradebook = {
 # Calculate average for each student
 for student, grades in gradebook.items():
     avg = sum(grades.values()) / len(grades)
-    print(f"{student}: {avg:.2f}")
+    print(student + ":", round(avg, 2))
 
-# Output: Alice: 89.00
+# Output: Alice: 89.0
 #         Bob: 80.33
-#         Charlie: 92.00
+#         Charlie: 92.0
 
 # Find top student in math
 top_math = max(gradebook.items(), key=lambda x: x[1]["math"])
-print(f"Top in Math: {top_math[0]} ({top_math[1]['math']})")
+print("Top in Math:", top_math[0], "(" + str(top_math[1]['math']) + ")")
 # Output: Top in Math: Charlie (95)`}
         />
 
@@ -499,16 +499,16 @@ set2 = set(list2)
 set3 = set(list3)
 
 common = set1 & set2 & set3
-print(f"Common elements: {common}")  # Output: Common elements: {5}
+print("Common elements:", common)  # Output: Common elements: {5}
 
 # Find elements unique to each list
 unique1 = set1 - set2 - set3
 unique2 = set2 - set1 - set3
 unique3 = set3 - set1 - set2
 
-print(f"Unique to list1: {unique1}")  # Output: {1, 2, 3}
-print(f"Unique to list2: {unique2}")  # Output: set()
-print(f"Unique to list3: {unique3}")  # Output: {9}`}
+print("Unique to list1:", unique1)  # Output: {1, 2, 3}
+print("Unique to list2:", unique2)  # Output: set()
+print("Unique to list3:", unique3)  # Output: {9}`}
         />
 
         <h3>Example 6: Word Count in Text</h3>
@@ -533,7 +533,7 @@ counts = word_count(text)
 # Print top 3 most common
 top_3 = sorted(counts.items(), key=lambda x: x[1], reverse=True)[:3]
 for word, count in top_3:
-    print(f"{word}: {count}")
+    print(word + ":", count)
 
 # Output: hello: 2
 #         python: 2

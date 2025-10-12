@@ -424,11 +424,11 @@ print(is_palindrome("hello"))  # Output: False`}
 
 # Test
 text = "Hello World"
-print(f"Vowels: {count_vowels(text)}")  # Output: Vowels: 3
+print("Vowels:", count_vowels(text))  # Output: Vowels: 3
 
 # Using sum and generator expression
 count = sum(1 for char in text if char in "aeiouAEIOU")
-print(f"Vowels: {count}")  # Output: Vowels: 3`}
+print("Vowels:", count)  # Output: Vowels: 3`}
         />
 
         <h3>Example 3: Word Frequency Counter</h3>
@@ -448,7 +448,7 @@ print(f"Vowels: {count}")  # Output: Vowels: 3`}
 text = "hello world hello python world world"
 frequencies = word_frequency(text)
 for word, count in sorted(frequencies.items()):
-    print(f"{word}: {count}")
+    print(word + ":", count)
 
 # Output: hello: 2
 #         python: 1
