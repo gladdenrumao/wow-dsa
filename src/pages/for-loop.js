@@ -50,7 +50,7 @@ for char in text:
         <p>✅ For loop automatically gets each element from the sequence.</p>
       </LearningSection> */}
 
-      <LearningSection title="3️⃣ range() Function">
+      <LearningSection title="2️⃣ range() Function">
         <p>🧠 Generate sequences of numbers for iteration.</p>
         
         <h3>range(stop)</h3>

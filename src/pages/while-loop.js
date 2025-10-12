@@ -163,7 +163,7 @@ else:
       <LearningSection title="5️⃣ Infinite Loops">
         <p>🧠 Loops that never end - use with caution!</p>
         
-        <h3>Intentional Infinite Loop</h3>
+        {/* <h3>Intentional Infinite Loop</h3>
         <CodeBlock
           code={`# Menu system (intentional infinite loop)
 while True:
@@ -183,13 +183,13 @@ while True:
         print("Invalid choice")`}
         />
 
-        <h3>Avoiding Unintentional Infinite Loops</h3>
+        <h3>Avoiding Unintentional Infinite Loops</h3> */}
         <CodeBlock
           code={`# ❌ WRONG - Infinite loop (forgot to update)
 # count = 1
 # while count <= 5:
 #     print(count)
-#     # Missing: count += 1
+
 
 # ✅ CORRECT - Proper update
 count = 1
