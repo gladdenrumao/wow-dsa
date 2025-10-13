@@ -4,17 +4,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This project now supports **Supabase** for database functionality! 
 
-### Quick Setup
-1. **For beginners**: Read the complete step-by-step guide in [`SUPABASE_SETUP.md`](SUPABASE_SETUP.md)
-2. **Database schema**: Check [`DATABASE_SCHEMA.md`](DATABASE_SCHEMA.md) for table structures
-3. **Test connection**: Visit `/api/supabase-test` after setup
+### 🎯 New to Databases? Start Here!
+👉 **[START_HERE.md](START_HERE.md)** - Your complete getting started guide!
+
+### Quick Links
+- **5-minute setup**: [`QUICK_START.md`](QUICK_START.md)
+- **Detailed tutorial**: [`SUPABASE_SETUP.md`](SUPABASE_SETUP.md)
+- **Database tables**: [`DATABASE_SCHEMA.md`](DATABASE_SCHEMA.md)
+- **Learning path**: [`ROADMAP.md`](ROADMAP.md)
+- **Test connection**: Visit `/api/supabase-test` after setup
 
 ### Configuration
 ```bash
 # Copy the example environment file
 cp .env.local.example .env.local
 
-# Add your Supabase credentials (see SUPABASE_SETUP.md for details)
+# Add your Supabase credentials (get them from https://supabase.com)
 ```
 
 ## Getting Started
